@@ -1,0 +1,127 @@
+body {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  background-color: white;
+  --tl-translation: 200px;
+}
+
+.header {
+  margin-top: 36px;
+  text-align: center;
+}
+.header p {
+  font-size: 18px;
+}
+
+img {
+  height: 400px;
+  border-radius: 6px;
+  display: block;
+}
+
+#image {
+  max-width: 100%;
+}
+
+.photo-container {
+  margin: 40px 0;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  flex-direction: row;
+}
+
+figure {
+  margin: 0 8px;
+}
+figcaption {
+  margin-top: 4px;
+}
+
+#tribute-info {
+  margin: 0 30px;
+}
+ul {
+  display: inline-block;
+  list-style-type: none;
+  padding: 0;
+}
+li {
+  width: 300px;
+  border-radius: 6px;
+  background-color: #94ba61;
+  margin: 12px 0;
+  padding: 10px;
+  position: relative;
+}
+li::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: black;
+  border-radius: 50%;
+  z-index: 2;
+}
+li:nth-child(even) {
+  transform: translateX(calc(var(--tl-translation) * -1));
+}
+li:nth-child(even)::before {
+  left: calc(50% + var(--tl-translation));
+}
+
+li:nth-child(odd) {
+  transform: translateX(var(--tl-translation));
+}
+li:nth-child(odd)::before {
+  left: calc(50% - var(--tl-translation));
+}
+#timeline-container {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background: #ebfcc4;
+  border-radius: 6px;
+}
+#vline {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 1.5px solid black;
+  height: 100%;
+  width: 0;
+}
+h3 {
+  text-align: center;
+}
+.quote-container {
+  margin: 40px 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+}
+blockquote {
+  background: #ffd9bd;
+  border-radius: 6px;
+  padding: 20px;
+  width: 33%;
+  min-width: 300px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+blockquote p {
+  margin-top: 0;
+}
+
+.footer {
+  margin: 50px;
+}
