@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #ffe9b6;
+  margin: 0;
+}
+
+h1 {
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+#container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 600px;
+  height: 550px;
+  background-color: #feda80;
+  border-radius: 10px;
+  padding: 16px;
+}
+
+#screen {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(100px, 1fr));
+  gap: 10px;
+  margin: 1rem auto;
+  padding: 16px;
+  border-radius: 10px;
+  background: black;
+  width: 450px;
+}
+
+#screen > div {
+  border-radius: 6px;
+  padding: 10px;
+  font-weight: 600;
+  background: black;
+  color: green;
+  font-family: "Courier New", Courier, monospace;
+}
+
+#price-screen,
+#status-screen {
+  text-align: right;
+}
+
+#costumer-cash {
+  margin: 1rem auto;
+  width: 482px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px;
+}
+
+#cash {
+  height: 36px;
+  flex: 1;
+  background-color: black;
+  border-style: none;
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 16px;
+  color: green;
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 600;
+}
+
+#purchase-btn {
+  height: 36px;
+  margin-left: 8px;
+  background-color: #facf59;
+  border: 2px solid black;
+  border-radius: 5px;
+  padding: 0 12px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#currency-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
+  gap: 10px;
+  width: 450px;
+  margin: 1rem auto;
+  padding: 16px;
+  border: 2px solid black;
+  border-radius: 10px;
+  background: #facf59;
+}
+
+#currency-grid > div {
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 10px;
+  text-align: center;
+  background: #feda80;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+#change-due {
+  display: none;
+}
