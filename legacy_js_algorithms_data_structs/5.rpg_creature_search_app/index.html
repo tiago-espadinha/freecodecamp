@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pokedex</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <div id="container">
+        <h1>PokeDex</h1>
+        <div id="search-container">
+          <input
+            type="text"
+            name=""
+            id="search-input"
+            required
+            placeholder="Type a creature's name or number"
+          />
+          <button id="search-button">Search</button>
+        </div>
+
+        <div id="top-container">
+          <div id="general-info">
+            <div id="creature-id">#0</div>
+            <div id="creature-name">?????</div>
+            <div id="weight">Weight: -</div>
+            <div id="height">Height: -</div>
+
+            <div id="types"><span class="type curse">???</span></div>
+          </div>
+          <div id="special">
+            <div id="special-name"></div>
+            <div id="description"></div>
+          </div>
+        </div>
+
+        <div id="bottom-container">
+          <table>
+            <tr>
+              <td class="stat-name" id="hp-stat">HP</td>
+              <td class="stat-bar" id="hp-bar"></td>
+              <td class="stat-value" id="hp">-</td>
+            </tr>
+            <tr>
+              <td class="stat-name" id="attack-stat">Attack</td>
+              <td class="stat-bar" id="attack-bar"></td>
+              <td class="stat-value" id="attack">-</td>
+            </tr>
+            <tr>
+              <td class="stat-name" id="defense-stat">Defense</td>
+              <td class="stat-bar" id="defense-bar"></td>
+              <td class="stat-value" id="defense">-</td>
+            </tr>
+            <tr>
+              <td class="stat-name" id="special-attack-stat">Special Attack</td>
+              <td class="stat-bar" id="special-attack-bar"></td>
+              <td class="stat-value" id="special-attack">-</td>
+            </tr>
+            <tr>
+              <td class="stat-name" id="special-defense-stat">
+                Special Defense
+              </td>
+              <td class="stat-bar" id="special-defense-bar"></td>
+              <td class="stat-value" id="special-defense">-</td>
+            </tr>
+            <tr>
+              <td class="stat-name" id="speed-stat">Speed</td>
+              <td class="stat-bar" id="speed-bar"></td>
+              <td class="stat-value" id="speed">-</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
