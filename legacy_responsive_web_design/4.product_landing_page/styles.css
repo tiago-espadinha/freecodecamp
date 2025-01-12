@@ -1,0 +1,240 @@
+body {
+  font-family:
+    "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans",
+    Arial, sans-serif;
+  text-align: center;
+  background-color: var(--color-background-primary);
+  --color-background-primary: #f6f5f4;
+  --color-background-secondary: #ffffff;
+  --color-button-primary: #0075de;
+  --color-button-secondary: #005bab;
+  --border-primary: 1px solid #0000001a;
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  position: fixed;
+  top: 0;
+  height: 100px;
+  background-color: var(--color-background-secondary);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 0 12px;
+  z-index: 1;
+  margin: 0;
+  border-bottom: var(--border-primary);
+}
+#header img {
+  height: 80px;
+}
+#nav-bar {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex: 1;
+  margin: 0 40px;
+}
+#nav-bar a {
+  padding: 20px 20px;
+  border-radius: 0.75rem;
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+}
+#nav-bar a:hover {
+  background-color: var(--color-background-primary);
+  transition: 0.2s;
+}
+main {
+  position: relative;
+  margin: 120px 100px 0 100px;
+}
+section {
+  margin: 40px;
+}
+section h1,
+section h2,
+section h3 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+form input[type="email"] {
+  background-color: var(--color-background-primary);
+  border: var(--border-primary);
+  border-radius: 0.75rem;
+  padding: 12px 8px;
+  width: 70%;
+  max-width: 275px;
+}
+form input[type="email"]:focus {
+  border: solid 1px black;
+  outline: none;
+}
+
+form input[type="submit"] {
+  color: white;
+  background-color: var(--color-button-primary);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 12px 12px;
+}
+form input[type="submit"]:hover {
+  background-color: var(--color-button-secondary);
+  transition: 0.2s;
+}
+
+#video {
+  display: block;
+  margin: 20px auto;
+  border-radius: 0.75rem;
+  width: 60%;
+  aspect-ratio: 16/9;
+}
+
+#hero {
+  line-height: 40px;
+}
+#hero-container {
+  width: 60%;
+  margin: auto;
+}
+
+#features div {
+  background-color: var(--color-background-primary);
+  border: var(--border-primary);
+  padding: 16px 30px 4px 30px;
+  margin-bottom: 20px;
+  border-radius: 0.75rem;
+}
+
+#features li {
+  font-weight: bold;
+}
+
+#features ol {
+  padding: 0;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 40% 40%;
+  gap: 20px;
+  justify-content: space-evenly;
+  list-style-position: inside;
+}
+
+section {
+  background-color: var(--color-background-secondary);
+  border-radius: 0.75rem;
+  border: 1px solid #0000001a;
+  padding: 5px 10px 20px 10px;
+}
+#quotes {
+  padding: 0;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  gap: 20px;
+  justify-content: space-evenly;
+}
+blockquote {
+  background-color: var(--color-background-primary);
+  border: var(--border-primary);
+  padding: 0px 20px 16px 20px;
+  margin-bottom: 20px;
+  border-radius: 0.75rem;
+}
+#faq-grid {
+  display: flex;
+  flex-direction: column;
+}
+.faq-item {
+  align-self: center;
+  width: 60%;
+  border: var(--border-primary);
+  background-color: var(--color-background-primary);
+  padding: 20px 16px;
+  margin-bottom: 20px;
+  border-radius: 0.75rem;
+}
+footer {
+  gap: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: var(--color-background-secondary);
+  border-top: var(--border-primary);
+  width: 100%;
+  box-sizing: border-box;
+}
+footer p {
+  margin: 0 50px;
+  width: 50%;
+}
+footer div {
+  display: flex;
+  width: 80%;
+  justify-content: space-evenly;
+}
+footer a {
+  padding: 20px 20px;
+  border-radius: 0.75rem;
+  color: black;
+  text-decoration: none;
+  font-size: large;
+  font-weight: bold;
+}
+footer a:hover {
+  background-color: var(--color-background-primary);
+}
+
+#pricing-table {
+  justify-content: space-evenly;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+}
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 33%;
+  height: 250px;
+}
+.product h2 {
+  margin: 12px 0 0 0;
+}
+.product ol {
+  margin-top: 4px;
+  height: 50%;
+  align-content: center;
+  line-height: 1.5em;
+  text-align: left;
+}
+.btn {
+  color: white;
+  background-color: var(--color-button-primary);
+  border: none;
+  border-radius: 0.75rem;
+  padding: 12px 12px;
+  width: 30%;
+}
+.btn:hover {
+  background-color: var(--color-button-secondary);
+  transition: 0.2s;
+}
+@media screen and (max-width: 400px) {
+  #Pricing {
+    flex-direction: column;
+  }
+}
