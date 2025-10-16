@@ -1,0 +1,199 @@
+<!doctype html>
+<link rel="stylesheet" href="styles.css" />
+<html>
+  <head>
+    <title>Biodiversity Survey</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="icon"
+      href="https://cdn0.iconfinder.com/data/icons/nature-emojis-1/68/nature_emoji-02-1024.png"
+      type="image/png"
+    />
+  </head>
+  <body>
+    <h1 id="title">Community Biodiversity & Environment Feedback Survey</h1>
+    <p id="description">
+      Thank you for taking the time to help in nature conservation
+    </p>
+    <form id="survey-form">
+      <section>
+        <h2>Personal Information</h2>
+        <div class="form-group">
+          <label id="name-label">Name</label>
+          <input
+            class="form-control"
+            id="name"
+            type="text"
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="email-label">Email</label>
+          <input
+            class="form-control"
+            id="email"
+            type="email"
+            placeholder="Enter your Email"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label id="number-label">Age</label>
+          <input
+            class="form-control"
+            id="number"
+            type="number"
+            placeholder="Age"
+            min="15"
+            max="90"
+          />
+        </div>
+
+        <div class="form-group">
+          <label id="location-label">Location</label>
+          <input
+            class="form-control"
+            id="location"
+            type="text"
+            placeholder="City name, Park, or Area"
+            required
+          />
+        </div>
+      </section>
+
+      <section>
+        <h2>Observations</h2>
+        <div class="form-group">
+          <label>What did you observe?</label>
+          <select class="form-control" name="" id="dropdown">
+            <option value="" disabled selected>Select your observation</option>
+            <option value="value1">Animals</option>
+            <option value="value2">Plants</option>
+            <option value="value3">Invasive Species</option>
+            <option value="value4">Pollution</option>
+            <option value="value5">Habitat Damage</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Is this a concern or a positive observation?</label>
+          <label
+            ><input
+              class="input-radio"
+              type="radio"
+              name="quality"
+              value="negative"
+            />A concern (needs improvement)</label
+          >
+          <label
+            ><input
+              class="input-radio"
+              type="radio"
+              name="quality"
+              value="positive"
+            />A positive thing (something worth preserving)</label
+          >
+          <label
+            ><input
+              class="input-radio"
+              type="radio"
+              name="quality"
+              value="neutral"
+            />Neutral/Not Sure</label
+          >
+        </div>
+        <div class="form-group">
+          <label>Describe your observation</label>
+          <input
+            class="form-control"
+            type="text"
+            placeholder='Short text - e.g., "Saw a fox near the river", "Thrash near a footpath"'
+          />
+        </div>
+        <div class="form-group">
+          <label>Upload an image of your observation</label>
+          <input class="form-upload" type="file" accept="image/*" multiple />
+        </div>
+      </section>
+
+      <section>
+        <h2>Improvements</h2>
+        <div class="form-group">
+          <label
+            >Which community actions would you support? (Check all that
+            apply)</label
+          >
+          <label
+            ><input
+              class="input-checkbox"
+              type="checkbox"
+              value="tree_planting"
+            />Tree planting</label
+          >
+          <label
+            ><input
+              class="input-checkbox"
+              type="checkbox"
+              value="cleanup"
+            />Local clean-up days</label
+          >
+          <label
+            ><input
+              class="input-checkbox"
+              type="checkbox"
+              value="wildlife"
+            />Wildlife monitoring</label
+          >
+          <label
+            ><input
+              class="input-checkbox"
+              type="checkbox"
+              value="workshops"
+            />Educational workshops</label
+          >
+          <label
+            ><input
+              class="input-checkbox"
+              type="checkbox"
+              value="green_spaces"
+            />Protecting green spaces</label
+          >
+        </div>
+        <div class="form-group">
+          <label
+            >Would you like to be contacted for updates or volunteering?</label
+          >
+          <label
+            ><input
+              class="input-radio"
+              type="radio"
+              name="quality"
+              value="yes"
+            />Yes</label
+          >
+          <label
+            ><input
+              class="input-radio"
+              type="radio"
+              name="quality"
+              value="no"
+            />No</label
+          >
+        </div>
+        <div>
+          <label
+            >Do you have suggestions for other improvements or actions?</label
+          >
+          <div>
+            <textarea
+              name="comment"
+              id="comment"
+              placeholder='E.g., "Install more bins", "Protect the wetland area", "Plant more trees"'
+            ></textarea>
+          </div>
+          <button id="submit">Submit</button>
+        </div>
+      </section>
+    </form>
+  </body>
+</html>
