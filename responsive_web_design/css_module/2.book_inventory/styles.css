@@ -1,0 +1,159 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+    Arial, sans-serif;
+  background-image: linear-gradient(135deg, #5cb8e6 0%, #5c73e6 100%);
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+h1 {
+  margin: 0 0 40px 0;
+  font-size: 2.5rem;
+  color: white;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  background: white;
+  border-collapse: collapse;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  width: 100%;
+}
+
+thead tr {
+  background-image: linear-gradient(135deg, #e68a5c 0%, #e65c73 100%);
+}
+
+thead th {
+  color: white;
+  font-weight: 600;
+  padding: 16px 12px;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+tr[class="to-read"] {
+  background-image: linear-gradient(
+    90deg,
+    rgba(34, 197, 94, 0.1) 0%,
+    transparent 100%
+  );
+  border-left: 4px solid #22c55e;
+}
+
+tr[class="read"] {
+  background-image: linear-gradient(
+    90deg,
+    rgba(59, 130, 246, 0.1) 0%,
+    transparent 100%
+  );
+  border-left: 4px solid #3b82f6;
+}
+
+tr[class="in-progress"] {
+  background-image: linear-gradient(
+    90deg,
+    rgba(245, 158, 11, 0.1) 0%,
+    transparent 100%
+  );
+  border-left: 4px solid #f59e0b;
+}
+
+span {
+  display: inline-block;
+}
+
+td {
+  padding: 16px 12px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+tbody tr:hover {
+  background-color: #f9fafb;
+  transition: background-color 0.2s ease;
+}
+
+tbody tr:last-child td {
+  border-bottom: none;
+}
+
+tr[class="to-read"] span[class="status"] {
+  background-image: linear-gradient(135deg, #dcfce7 0%, #dcfce7 100%);
+  color: #166534;
+  border: 1px solid #86efac;
+}
+
+tr[class="read"] span[class="status"] {
+  background-image: linear-gradient(135deg, #dbeafe 0%, #dbeafe 100%);
+  color: #0c4a6e;
+  border: 1px solid #7dd3fc;
+}
+
+tr[class="in-progress"] span[class="status"] {
+  background-image: linear-gradient(135deg, #fef3c7 0%, #fef3c7 100%);
+  color: #92400e;
+  border: 1px solid #fde047;
+}
+
+span[class="status"],
+span[class^="rate"] {
+  display: inline-block;
+  height: auto;
+  width: auto;
+  padding: 0;
+}
+
+span[class="status"] {
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+span[class^="rate"] {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+span[class^="rate"] > span {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+  transition: background-color 0.2s ease;
+  border: none;
+  margin: auto;
+}
+
+span[class~="one"] :nth-child(1) {
+  background-image: linear-gradient(135deg, #fbbf24 0%, #fbbf24 100%);
+}
+
+span[class~="two"] :nth-child(-n + 2) {
+  background-image: linear-gradient(135deg, #fbbf24 0%, #fbbf24 100%);
+}
+
+span[class~="three"] span {
+  background-image: linear-gradient(135deg, #fbbf24 0%, #fbbf24 100%);
+}
