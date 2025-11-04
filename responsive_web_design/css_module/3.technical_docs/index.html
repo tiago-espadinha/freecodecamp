@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Python Documentation</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/299/299378.png">
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>JS Documentation</header>
+      <ul>
+        <li>
+          <a href="#Introduction" class="nav-link">Introduction</a>
+        </li>
+        <li>
+          <a href="#What_You_Should_Already_Know" class="nav-link"
+            >What You Should Already Know</a
+          >
+        </li>
+        <li>
+          <a href="#Python_vs_Other_Languages" class="nav-link"
+            >Python vs Other Languages</a
+          >
+        </li>
+        <li>
+          <a href="#Hello_World" class="nav-link">Hello World</a>
+        </li>
+        <li>
+          <a href="#Variables" class="nav-link">Variables</a>
+        </li>
+        <li>
+          <a href="#Data_Types" class="nav-link">Data Types</a>
+        </li>
+        <li>
+          <a href="#Control_Flow" class="nav-link">Control Flow</a>
+        </li>
+        <li>
+          <a href="#Loops" class="nav-link">Loops</a>
+        </li>
+        <li>
+          <a href="#Functions" class="nav-link">Functions</a>
+        </li>
+        <li>
+          <a href="#Modules" class="nav-link">Modules</a>
+        </li>
+        <li>
+          <a href="#File_Handling" class="nav-link">File Handling</a>
+        </li>
+        <li>
+          <a href="#Error_Handling" class="nav-link">Error Handling</a>
+        </li>
+        <li>
+          <a href="#Reference" class="nav-link">Reference</a>
+        </li>
+      </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <p>
+          Python is a high-level, interpreted programming language known for its
+          simplicity and readability. It is widely used in web development, data
+          science, automation, artificial intelligence, and more.
+        </p>
+        <p>
+          Python emphasizes code readability and allows developers to write
+          clear and logical code for both small and large-scale projects.
+        </p>
+        <p>Some key features of Python:</p>
+        <ul>
+          <li>Easy to learn and use</li>
+          <li>Large standard library</li>
+          <li>Cross-platform compatibility</li>
+          <li>Strong community support</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="What_You_Should_Already_Know">
+        <header>What You Should Already Know</header>
+        <p>Before starting with Python, you should have:</p>
+        <ul>
+          <li>Basic understanding of how computers work</li>
+          <li>Familiarity with programming concepts (optional but helpful)</li>
+          <li>Basic knowledge of text editors or IDEs</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Python_vs_Other_Languages">
+        <header>Python vs Other Languages</header>
+        <p>Python differs from many languages like Java or C++:</p>
+        <ul>
+          <li>It uses dynamic typing instead of static typing</li>
+          <li>It has a simpler, more readable syntax</li>
+          <li>It does not require compilation before execution</li>
+          <li>It uses indentation instead of braces</li>
+        </ul>
+        <p>Python:</p>
+        <pre><code>
+        if x > 5: 
+
+            print("Hello")
+        </code></pre>
+        <p>C++:</p>
+        <pre><code>
+        if (x > 5) { 
+
+            cout << "Hello";
+
+        }
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Hello_World">
+        <header>Hello World</header>
+        <p>Your first Python program:</p>
+        <pre><code>
+        print("Hello, World!")
+        </code></pre>
+        <p>This prints text to the console.</p>
+      </section>
+      <section class="main-section" id="Variables">
+        <header>Variables</header>
+        <p>Variables store data values.</p>
+        <p>Example:</p>
+        <pre><code>
+        x = 10 
+
+        name = "Alice"
+        </code></pre>
+        <p>Rules:</p>
+        <ul>
+          <li>No declaration keyword needed</li>
+          <li>Type is assigned automatically</li>
+          <li>Case-sensitive</li>
+        </ul>
+      </section>
+
+      <section class="main-section" id="Data_Types">
+        <header>Data Types</header>
+        <p>Common Python data types:</p>
+        <ul>
+          <li>Integer → 10</li>
+          <li>Float → 3.14</li>
+          <li>String → "Hello"</li>
+          <li>Boolean → True / False</li>
+          <li>List → [1, 2, 3]</li>
+          <li>Dictionary → {"key": "value"}</li>
+        </ul>
+        <p>Example:</p>
+        <pre><code>
+        age = 25 
+
+        price = 19.99 
+
+        is_valid = True
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Control_Flow">
+        <header>Control Flow</header>
+        <p>Python uses conditional statements to control execution.</p>
+        <p>Example:</p>
+        <code
+          >if x > 10: print("Greater than 10") elif x == 10: print("Equal to
+          10") else: print("Less than 10")</code
+        >
+      </section>
+
+      <section class="main-section" id="Loops">
+        <header>Loops</header>
+        <p>While Loop</p>
+        <pre><code>
+        count = 0 
+
+        while count < 5: 
+
+            print(count) 
+
+            count += 1
+        </code></pre>
+        <p>For Loop</p>
+        <pre><code>
+        for i in range(5):
+
+            print(i)
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Functions">
+        <header>Functions</header>
+        <p>Functions allow code reuse.</p>
+        <p>Example:</p>
+        <pre><code>
+        def greet(name): 
+
+            return "Hello " + name 
+        </code></pre>
+        <p>Calling a function:</p>
+        <pre><code>
+        print(greet("Alice"))
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Modules">
+        <header>Modules</header>
+        <p>Modules are files containing Python code.</p>
+        <p>Example:</p>
+        <pre><code>
+        import math 
+
+        print(math.sqrt(16)) 
+        </code></pre>
+        <p>You can also import specific functions:</p>
+        <pre><code>
+        from math import sqrt
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="File_Handling">
+        <header>File Handling</header>
+        <p>Python can read and write files.</p>
+        <p>Write to a file:</p>
+        <pre><code>
+        with open("file.txt", "w") as f: 
+
+            f.write("Hello World") 
+        </code></pre>
+        <p>Read a file:</p>
+        <pre><code> 
+        with open("file.txt", "r") as f: 
+
+            print(f.read())
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Error_Handling">
+        <header>Error Handling</header>
+        <p>Handle errors using try-except:</p>
+        <pre><code>
+        try: 
+
+            x = int("abc") 
+
+        except ValueError: 
+
+            print("Conversion failed")
+        </code></pre>
+      </section>
+
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <ul>
+          <li>Official Python Documentation</li>
+          <li>Community tutorials and guides</li>
+          <li>Practice platforms like coding challenges</li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
