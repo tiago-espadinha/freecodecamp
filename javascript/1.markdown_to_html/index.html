@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown → HTML Converter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Syne+Mono&family=Syne:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <h1>md</h1>
+      <span class="header-arrow">→</span>
+      <h1>html</h1>
+      <span class="badge">CONVERTER v1.0</span>
+    </header>
+
+    <div class="cheatsheet">
+      <span class="chip"># h1 ## h2 ### h3</span>
+      <span class="chip">**bold** __bold__</span>
+      <span class="chip">*italic* _italic_</span>
+      <span class="chip">![alt](src)</span>
+      <span class="chip">[text](url)</span>
+      <span class="chip">&gt; quote</span>
+    </div>
+
+    <main>
+      <!-- Left: editor -->
+      <div class="panel">
+        <div class="panel-label"><span class="dot"></span>markdown input</div>
+        <textarea
+          id="markdown-input"
+          spellcheck="false"
+          placeholder="Start typing markdown here…
+
+# Hello World
+## A subtitle
+
+This is **bold** and this is *italic*.
+
+> A wise person once said something profound.
+
+[Visit Anthropic](https://anthropic.com)
+
+![Logo](https://via.placeholder.com/200x80?text=Image)
+"
+        ></textarea>
+      </div>
+
+      <!-- Right: output -->
+      <div class="panel output-panel">
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="raw">raw html</button>
+          <button class="tab-btn" data-tab="preview">preview</button>
+        </div>
+
+        <div id="tab-raw" class="tab-content active">
+          <pre
+            id="html-output"
+          ><span class="empty-state">// HTML will appear here…</span></pre>
+        </div>
+
+        <div id="tab-preview" class="tab-content">
+          <div id="preview">
+            <p class="empty-state">// Rendered preview will appear here…</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <span>type markdown on the left · see results on the right</span>
+      <span id="char-count">0 chars</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

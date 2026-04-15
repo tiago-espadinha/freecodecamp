@@ -1,0 +1,312 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --ink: #0d0c08;
+  --paper: #f5f0e8;
+  --amber: #c47a0a;
+  --amber-light: #f0a830;
+  --amber-dim: #7a4c06;
+  --amber-pale: #fdf3dc;
+  --line: #d4c9a8;
+  --line-strong: #b0a07a;
+  --muted: #6e6248;
+  --panel-bg: #faf6ed;
+  --tag-green: #2e6b3e;
+  --tag-green-bg: #d4f5dc;
+  --radius: 6px;
+}
+
+body {
+  font-family: "Syne", sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── Header ── */
+header {
+  padding: 1.25rem 2rem;
+  border-bottom: 2px solid var(--ink);
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  background: var(--ink);
+  color: var(--amber-light);
+}
+
+header h1 {
+  font-family: "Syne Mono", monospace;
+  font-size: 1.1rem;
+  letter-spacing: 0.05em;
+  color: var(--amber-light);
+}
+
+header .header-arrow {
+  font-size: 1.1rem;
+  opacity: 0.6;
+}
+
+header .badge {
+  margin-left: auto;
+  font-size: 0.7rem;
+  font-family: "Syne Mono", monospace;
+  color: var(--amber-dim);
+  letter-spacing: 0.12em;
+  background: #1e1c14;
+  padding: 3px 10px;
+  border-radius: 20px;
+  border: 1px solid #3a3520;
+}
+
+/* ── Cheatsheet bar ── */
+.cheatsheet {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  padding: 0.6rem 2rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--ink);
+}
+
+.cheatsheet .chip {
+  font-family: "Syne Mono", monospace;
+  font-size: 0.68rem;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: #1e1c14;
+  color: #b89a5a;
+  border: 1px solid #3a3520;
+  cursor: default;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+/* ── Main layout ── */
+main {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  overflow: hidden;
+}
+
+/* ── Panels ── */
+.panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.panel + .panel {
+  border-left: 2px solid var(--line-strong);
+}
+
+.panel-label {
+  font-family: "Syne Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  text-transform: uppercase;
+  padding: 0.55rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  background: var(--panel-bg);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.panel-label .dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--amber);
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+/* ── Editor ── */
+#markdown-input {
+  flex: 1;
+  resize: none;
+  border: none;
+  outline: none;
+  font-family: "Syne Mono", monospace;
+  font-size: 0.9rem;
+  line-height: 1.75;
+  padding: 1.5rem 1.5rem;
+  background: var(--paper);
+  color: var(--ink);
+  caret-color: var(--amber);
+  overflow-y: auto;
+}
+
+#markdown-input::placeholder {
+  color: var(--line-strong);
+}
+
+/* ── Output tabs ── */
+.output-panel {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  background: var(--panel-bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.tab-btn {
+  font-family: "Syne Mono", monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  padding: 0.55rem 1.1rem;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  transition:
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.tab-btn.active {
+  color: var(--amber);
+  border-bottom-color: var(--amber);
+}
+
+.tab-content {
+  flex: 1;
+  overflow-y: auto;
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* raw HTML output */
+#html-output {
+  font-family: "Syne Mono", monospace;
+  font-size: 0.82rem;
+  line-height: 1.8;
+  padding: 1.5rem;
+  color: var(--ink);
+  white-space: pre-wrap;
+  word-break: break-all;
+  background: var(--paper);
+  min-height: 100%;
+}
+
+#html-output .hl-tag {
+  color: var(--amber);
+}
+#html-output .hl-attr {
+  color: #5a7a3a;
+}
+#html-output .hl-val {
+  color: #a0522d;
+}
+#html-output .hl-text {
+  color: var(--ink);
+}
+
+/* preview */
+#preview {
+  padding: 1.75rem 1.75rem;
+  line-height: 1.75;
+  font-size: 0.95rem;
+  background: var(--paper);
+  min-height: 100%;
+}
+
+#preview h1 {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin-bottom: 0.4em;
+  border-bottom: 2px solid var(--line);
+  padding-bottom: 0.2em;
+}
+#preview h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 1em 0 0.3em;
+}
+#preview h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin: 0.8em 0 0.2em;
+  color: var(--amber-dim);
+}
+#preview strong {
+  font-weight: 700;
+}
+#preview em {
+  font-style: italic;
+  color: var(--muted);
+}
+#preview blockquote {
+  border-left: 3px solid var(--amber);
+  padding: 0.4em 1em;
+  margin: 0.8em 0;
+  color: var(--muted);
+  background: var(--amber-pale);
+  border-radius: 0 var(--radius) var(--radius) 0;
+}
+#preview a {
+  color: var(--amber);
+  text-decoration: underline;
+}
+#preview img {
+  max-width: 100%;
+  border-radius: var(--radius);
+  margin: 0.5em 0;
+  border: 1px solid var(--line);
+}
+
+/* ── Empty state ── */
+.empty-state {
+  color: var(--line-strong);
+  font-family: "Syne Mono", monospace;
+  font-size: 0.75rem;
+  padding: 2rem;
+  letter-spacing: 0.05em;
+}
+
+/* ── Footer ── */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 0.45rem 2rem;
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-family: "Syne Mono", monospace;
+  background: var(--panel-bg);
+  display: flex;
+  justify-content: space-between;
+}
+
+#char-count {
+  color: var(--amber-dim);
+}
+
+@media (max-width: 700px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .panel + .panel {
+    border-left: none;
+    border-top: 2px solid var(--line-strong);
+  }
+}
