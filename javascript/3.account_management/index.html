@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bank Account Manager</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bank-container">
+      <h1>🏦 SecureBank Portal</h1>
+
+      <div class="balance-display">
+        <h2 id="current-balance">Current balance: $0</h2>
+      </div>
+
+      <div class="input-group">
+        <input
+          type="number"
+          id="amount-input"
+          placeholder="Enter amount (e.g. 100)"
+          min="0"
+        />
+        <div class="button-grid">
+          <button onclick="handleDeposit()" class="btn-deposit">Deposit</button>
+          <button onclick="handleWithdraw()" class="btn-withdraw">
+            Withdraw
+          </button>
+        </div>
+      </div>
+
+      <div class="info-actions">
+        <button onclick="handleCheckBalance()">Check Balance</button>
+        <button onclick="handleListDeposits()">List Deposits</button>
+        <button onclick="handleListWithdrawals()">List Withdrawals</button>
+      </div>
+
+      <div class="output-log">
+        <h3>Transaction Log</h3>
+        <p id="message-display">Welcome! Please make a transaction.</p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+/* style.css */
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.bank-container {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+}
+
+h1 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.balance-display {
+  background: #ecf0f1;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.button-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+button {
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: opacity 0.2s;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+.btn-deposit {
+  background-color: #27ae60;
+  color: white;
+}
+.btn-withdraw {
+  background-color: #e74c3c;
+  color: white;
+}
+
+.info-actions {
+  display: flex;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.info-actions button {
+  background-color: #34495e;
+  color: white;
+  font-size: 0.75rem;
+  flex: 1;
+}
+
+.output-log {
+  margin-top: 25px;
+  text-align: left;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+}
+
+.output-log h3 {
+  font-size: 0.9rem;
+  color: #7f8c8d;
+}
+
+#message-display {
+  background: #fdf9e1;
+  padding: 10px;
+  border-left: 4px solid #f1c40f;
+  font-size: 0.9rem;
+  color: #444;
+}
