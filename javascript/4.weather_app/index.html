@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atmosphere | Modern Weather</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <header>
+        <h1>Atmosphere</h1>
+        <p>Select a city to check the current conditions.</p>
+      </header>
+
+      <div class="controls">
+        <select id="city-select">
+          <option value=""></option>
+          <option value="new york">New York</option>
+          <option value="los angeles">Los Angeles</option>
+          <option value="chicago">Chicago</option>
+          <option value="paris">Paris</option>
+          <option value="tokyo">Tokyo</option>
+          <option value="london">London</option>
+        </select>
+        <button id="get-weather-btn">Get Weather</button>
+      </div>
+
+      <main id="weather-card" class="hidden">
+        <div class="location-header">
+          <h2 id="location"></h2>
+          <img id="weather-icon" src="" alt="Weather Icon" />
+        </div>
+
+        <div class="weather-info">
+          <div class="main-stat">
+            <span id="main-temperature"></span>
+            <p id="weather-main"></p>
+          </div>
+
+          <div class="details-grid">
+            <div class="detail-item">
+              <span>Feels Like</span>
+              <p id="feels-like"></p>
+            </div>
+            <div class="detail-item">
+              <span>Humidity</span>
+              <p id="humidity"></p>
+            </div>
+            <div class="detail-item">
+              <span>Wind Speed</span>
+              <p id="wind"></p>
+            </div>
+            <div class="detail-item">
+              <span>Wind Gust</span>
+              <p id="wind-gust"></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
