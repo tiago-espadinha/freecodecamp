@@ -1,0 +1,107 @@
+:root {
+  --bg: #0d0d0d;
+  --panel: #1a1a1a;
+  --accent-x: #00ffcc;
+  --accent-o: #ff00ff;
+  --text: #e0e0e0;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: "Courier New", Courier, monospace;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.game-wrapper {
+  text-align: center;
+}
+
+.title {
+  letter-spacing: 5px;
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.title span {
+  color: var(--text);
+}
+
+.status-message {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  height: 2rem;
+  text-transform: uppercase;
+}
+
+.has-winner {
+  color: var(--accent-x);
+  text-shadow: 0 0 10px var(--accent-x);
+  animation: blink 1s infinite;
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 100px);
+  grid-template-rows: repeat(3, 100px);
+  gap: 15px;
+  background: var(--panel);
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.square {
+  background: #222;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 2.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  color: transparent;
+  transition: all 0.3s ease;
+}
+
+.square:hover {
+  background: #2a2a2a;
+  border-color: #555;
+}
+
+.square.X {
+  color: var(--accent-x);
+  text-shadow: 0 0 15px var(--accent-x);
+}
+
+.square.O {
+  color: var(--accent-o);
+  text-shadow: 0 0 15px var(--accent-o);
+}
+
+#reset {
+  margin-top: 40px;
+  background: transparent;
+  color: #666;
+  border: 1px solid #333;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  cursor: pointer;
+  letter-spacing: 2px;
+  transition: 0.3s;
+}
+
+#reset:hover {
+  color: white;
+  border-color: white;
+  box-shadow: 0 0 10px white;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0.5;
+  }
+}
