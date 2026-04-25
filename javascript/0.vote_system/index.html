@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Poll Master 3000</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-card">
+      <h1>Interactive Voting System</h1>
+      <section class="admin-panel">
+        <h3>Create a Poll Option</h3>
+        <input type="text" id="newOption" placeholder="Enter option name..." />
+        <button onclick="handleAddOption()">Add Option</button>
+      </section>
+      <section class="voting-panel">
+        <h3>Cast Your Vote</h3>
+        <select id="optionSelect">
+          <option>Select an option</option>
+        </select>
+        <input type="text" id="voterId" placeholder="Your Voter ID" />
+        <button onclick="handleVote()">Submit Vote</button>
+      </section>
+      <div id="messageLog" class="message-area"></div>
+      <section class="results-panel">
+        <button onclick="handleDisplayResults()">Refresh Results</button>
+        <pre id="resultsDisplay">Results will appear here...</pre>
+      </section>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
